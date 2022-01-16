@@ -1,7 +1,8 @@
 {
-  "name": "simple-otp-input",
-  "version": "0.1.0",
-  "private": true,
+  "name": "mroom-react-otp-input",
+  "author": "Mounir Hamzaoui",
+  "version": "0.1.2",
+  "description": "A simple One Time Password verification input for your react application.",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
@@ -11,9 +12,18 @@
     "react-scripts": "5.0.0",
     "web-vitals": "^2.1.2"
   },
+  "keywords": [
+    "react-otp",
+    "one-time-password",
+    "otp-input",
+    "react",
+    "component",
+    "ui"
+  ],
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build-rca": "react-scripts build",
+    "build": "rm -rf dist && NODE_ENV=production babel src/lib --out-dir dist --copy-files",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -22,6 +32,20 @@
       "react-app",
       "react-app/jest"
     ]
+  },
+  "peerDependencies": {
+    "react": "^17.0.2"
+  },
+  "private": false,
+  "devDependencies": {
+    "@babel/cli": "^7.16.8",
+    "@babel/core": "^7.16.7",
+    "@babel/polyfill": "^7.12.1",
+    "@babel/preset-env": "^7.16.8",
+    "@babel/preset-react": "^7.16.7",
+    "@babel/preset-stage-0": "^7.8.3",
+    "webpack": "^5.65.0",
+    "webpack-cli": "^4.9.1"
   },
   "browserslist": {
     "production": [
@@ -34,5 +58,13 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/themooneer/mroom-react-otp-verificator.git"
   }
 }
